@@ -32,10 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Machine.Specifications">
-      <HintPath>..\Bowling\packages\Machine.Specifications.0.4.24.0\lib\Machine.Specifications.dll</HintPath>
-    </Reference>
-    <Reference Include="NSubstitute">
-      <HintPath>..\Bowling\packages\NSubstitute.1.3.0.0\lib\NET40\NSubstitute.dll</HintPath>
+      <HintPath>..\packages\Machine.Specifications.0.4.24.0\lib\Machine.Specifications.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,15 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="when_rolling_all_ones_game.cs" />
+    <Compile Include="when_rolling_a_gutter_game.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bowling\Bowling.csproj">
       <Project>{BD7005BF-4A7E-418A-A741-89793F347A99}</Project>
       <Name>Bowling</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
