@@ -46,6 +46,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_rolling_all_ones_game.cs" />
     <Compile Include="when_rolling_a_gutter_game.cs" />
+    <Compile Include="when_rolling_one_spare.cs" />
+    <Compile Include="when_rolling_too_many_balls.cs" />
     <Compile Include="with_game.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,6 @@ namespace Bowling.Test
     {
         Because of = () => RollMany(20,1);
 
-        It should_score_zero_for_the_game = () => Game.Score.ShouldEqual(20);
+        It should_score_zero_for_the_game = () => Game.Score().ShouldEqual(20);
     }
 }

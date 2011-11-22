@@ -1,12 +1,34 @@
-﻿namespace Bowling
+﻿using System.Collections.Generic;
+
+namespace Bowling
 {
     public class Game
     {
-        public void Roll(int pins)
+        public IList<int> Rolls { get; set; }
+
+        public Game()
         {
-            Score += pins;
+            Rolls = new List<int>(21);
         }
 
-        public int Score { get; set; }
+        public void Roll(int pins)
+        {
+            Rolls.Add(pins);
+        }
+
+        public int Score()
+        {
+            var score = 0;
+            var currentFrame = 0;
+            for (var frame = 0; frame < 10; frame++)
+            {
+                var frameScore = Rolls[currentFrame] + Rolls[currentFrame + 1];
+                if (frameScore == 10)
+                    score += Rolls[currentFrame + 2];
+                score += frameScore;
+                currentFrame += 2;
+            }
+            return score;
+        }
     }
 }
